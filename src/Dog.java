@@ -65,7 +65,7 @@ final public class Dog extends Pet {
         this.commands = commands;
     }
 
-    public String getInfo() {
+    public final String getInfo() {
         return "Name " + this.name + " Breed " + this.breed + " Commands " + this.commands + " Color " + this.getColor() + " Shelter " + this.getShelter();
     }
 }

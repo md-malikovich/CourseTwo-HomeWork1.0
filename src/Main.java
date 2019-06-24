@@ -17,16 +17,33 @@ public class Main {
         System.out.println(dog3.getInfo() + " - третий");
         System.out.println("______________________________");
 
-        dog1.makeVoice();
-        dog2.makeVoice("Rex", 15);
-        dog3.makeVoice("Juchka");
+        int i;
+        for (i = 0; i < 3; i++) {
+            dog1.makeVoice();
+            dog2.makeVoice("Rex", 15);
+            dog3.makeVoice("Juchka");
+        }
 
         System.out.println("______________________________");
         System.out.println(shelter1.getName() + shelter1.getAddres());
         System.out.println(shelter2.getName() + shelter2.getAddres());
     }
 }
-/*3 объекта Собачек используя 3 разных конструктора (1. по-умолчанию, 2. name, breed, color, shelter 3. name, breed, color, shelter, commands)
-в качестве аргумента приюта передаем ново созданный объект Приюта (Shelter)*/
-//Распечатать всю информацию по 3м Собачкам +
-//Переделать реализацию методов getInfo так чтоб дочерние классы не смогли перезаписать этот метод в родительском классе - final???
+//a) 2 новых объекта Приюта (Shelter)
+//b) 3 объекта Собачек используя 3 разных конструктора (1. по-умолчанию, 2. name, breed, color, shelter
+// 3. name, breed, color, shelter, commands) в качестве аргумента приюта передаем ново созданный объект в пункте a.
+//c) Распечатать всю информацию по 3м Собачкам
+//d) Заставить полаять 3х Cобачек, вызывая разные методы makeVoice.
+
+//Создать класс Dog наследуя его от Pet с полями: name, breed, commands.
+//Создать getter-ы и setter-ы для полей класса
+//Создать 3 конструктора (1. по-умолчанию, 2. name, breed, color, shelter 3. name, breed, color, shelter, commands)
+//Создать 3 перегруженных метода void makeVoice(String voice, int number)
+//Создать метод public String getInfo() который перезапишет метод родительского класса и будет возвращать всю информацию по полям
+
+//В классе Main создать 3х Собак тремя разными конструкторами
+//Распечатать всю информацию о Собаках
+//Распечатать лай собак 3мя разными методами makeVoice
+
+//Переделать реализацию методов getInfo так чтоб дочерние классы не смогли перезаписать этот метод в родительском классе
+//Сделать класс Dog не наследуемым
